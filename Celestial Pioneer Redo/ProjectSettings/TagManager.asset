@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - bullet
+  - DamageUp
+  - HealthUp
+  - WinLoading
+  - Background
+  - EnemyRed
+  - EnemyYellow
+  - EnemyBlue
+  - EnemyGreen
+  - EnemyRedBullet
+  - EnemyYellowBullet
+  - EnemyBlueBullet
+  - EnemyGreenBullet
+  - enemyAbullet
+  - BulletStorage
+  - enemyCbullet
+  - enemyBbullet
+  - LivesUp
+  - SpeedUp
+  - FireRateUp
+  - MovementUp
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Shootable
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2656504809
+    locked: 0
+  - name: Enemies
+    uniqueID: 2723971707
+    locked: 0
+  - name: Bullets
+    uniqueID: 3026330539
+    locked: 0
+  - name: Background
+    uniqueID: 1996504845
+    locked: 0
+  - name: Parallax
+    uniqueID: 302444967
+    locked: 0
+  - name: New Layer
+    uniqueID: 2770119941
+    locked: 0
