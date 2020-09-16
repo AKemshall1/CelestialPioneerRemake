@@ -46,15 +46,18 @@ public class PlayerCollisions : MonoBehaviour
                 break;
             case "DamageUp":
                 Destroy(collision.gameObject);
-                pus.PowerUpDamage();
+                if (!pus.hasDamageUp)
+                    pus.PowerUpDamage();
                 break;
             case "FireRateUp":
                 Destroy(collision.gameObject);
-                pus.PowerUpFireRate();
+                if(!pus.hasFireUp)
+                    pus.PowerUpFireRate();
                 break;
             case "SpeedUp":
                 Destroy(collision.gameObject);
-                pus.PowerUpSpeed();
+                if (!pus.hasSpeedUp)
+                    pus.PowerUpSpeed();
                 break;
             case "HealthUp":
                 player.health += 20;
@@ -84,5 +87,16 @@ public class PlayerCollisions : MonoBehaviour
             player.lives--;
             player.health = 100;
         }
+    }
+
+    public void TakeDamage(int enemyDamage)
+    {
+        player.health -= enemyDamage;
+        if (uiManager != null)
+        {
+            Debug.Log("ui manager worlks bitch");
+        }
+        uiManager.UpdateHealthLives();
+        CheckDeath();
     }
 }

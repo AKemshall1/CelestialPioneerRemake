@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 212634310050339934}
   - component: {fileID: 50963723580115954}
   - component: {fileID: 5667479439650500158}
-  - component: {fileID: 2035888087709568284}
   - component: {fileID: 6128403174317806674}
-  - component: {fileID: 2787036036867652488}
+  - component: {fileID: 1914710324959241154}
+  - component: {fileID: 2306065038214998538}
+  - component: {fileID: -5541568273165910070}
   m_Layer: 8
   m_Name: EnemyYellow
   m_TagString: EnemyYellow
@@ -134,20 +135,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20044446, y: 0.27904096}
   m_EdgeRadius: 0
---- !u!114 &2035888087709568284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822781353527748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba5dafcc50ec3145b6d69b81bbfb9e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerShip: {fileID: 11400000, guid: 28d836bbab7a27d4d9be94e8f3180e4b, type: 2}
-  enemyYellow: {fileID: 11400000, guid: 6b5297cab609dd34ab06af1f9ba6eb82, type: 2}
 --- !u!114 &6128403174317806674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyYellow: {fileID: 11400000, guid: 6b5297cab609dd34ab06af1f9ba6eb82, type: 2}
-  uti: {fileID: 0}
---- !u!114 &2787036036867652488
+--- !u!114 &1914710324959241154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,20 +157,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822781353527748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a6dd238c7f865418619f6165a8fae2, type: 3}
+  m_Script: {fileID: 11500000, guid: c478743b150bd374b8ff8128f9e5345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyYellow: {fileID: 11400000, guid: 6b5297cab609dd34ab06af1f9ba6eb82, type: 2}
-  pm: {fileID: 1290051126541955867, guid: cde02b77b34d2c642a5580fbc258ddd3, type: 3}
-  explosion: {fileID: 1086683842055130546, guid: 08363a8da7f91ad458c10da77e0abf20,
+--- !u!114 &2306065038214998538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822781353527748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567f2f94ef684ee4fa6c72753f46a21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSprite: {fileID: -9070040941956643567, guid: 4d110389dcfebcd4ab82c1ebf433b2de,
     type: 3}
-  damageUp: {fileID: 1867232078812116664, guid: f2a3093bcbbec2a4380297b033afae24,
-    type: 3}
-  fireRateUp: {fileID: 1890024470411196820, guid: ba26bed9c2d5c3c478edd070c89ca66a,
-    type: 3}
-  speedUp: {fileID: 9187470798373352578, guid: eca793268937482408f1346bd8e761fe, type: 3}
-  healthUp: {fileID: 8011849278911975633, guid: 2f0869637d01f154ea042bb2d031becd,
-    type: 3}
-  livesUp: {fileID: 1942661306582081550, guid: 724aeb59a03b3b54f8fbe11c982247fd, type: 3}
-  dead: 0
-  hitPlayer: 0
+--- !u!114 &-5541568273165910070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822781353527748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0bc043e1750f545ac4dd313c04b216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyYellow: {fileID: 11400000, guid: 6b5297cab609dd34ab06af1f9ba6eb82, type: 2}

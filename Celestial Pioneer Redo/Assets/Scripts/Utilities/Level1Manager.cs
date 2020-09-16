@@ -6,8 +6,8 @@ using UnityEngine;
 public class Level1Manager : MonoBehaviour
 {
     //generate arrays of enemies in formations
-    float timerRed, timerYellow, timerBlue, timerRand;
-    public GameObject enemyRed, enemyBlue,enemyYellow;
+    float timerRed, timerBlue, timerRand, timerYellow;
+    public GameObject enemyRed, enemyBlue, enemyYellow;
 
     const float ySpawn = 5.2f;
     const float xLeft = -1.3f;

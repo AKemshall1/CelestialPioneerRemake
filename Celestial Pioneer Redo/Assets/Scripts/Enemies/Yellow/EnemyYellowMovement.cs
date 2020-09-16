@@ -1,38 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyYellowMovement : MonoBehaviour
 {
     public Ship enemyYellow;
-    private EnemyYellowUtility uti;
-
-    float yPos;
+    GameObject player;
+    Vector3 targetPos;
+    float xPos, yPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        uti = gameObject.GetComponent<EnemyYellowUtility>();   
+        player = GameObject.FindWithTag("Player");
+        targetPos = player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!uti.dead)  //move if not dead
-        {
-            Movement();
-        }
+        //Constantly move downwards
+        //In the X axis direction of the player position cached.
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, enemyYellow.moveSpeed);
     }
 
-    private void Movement()
+    public Vector3 GetTargetPosition()
     {
-        yPos = transform.position.y - enemyYellow.moveSpeed; //move the enemy down gradually
-        transform.position = new Vector2(transform.position.x, yPos);
-
-        if (transform.position.y <= enemyYellow.yBot)   //when reaching the end of the screen, we havent hit the player so explode without damaging the player
+        if (targetPos != null)
+            return targetPos;
+        else
         {
-            uti.hitPlayer = false;
-            uti.Explode(uti.hitPlayer);
+            Debug.LogError("EnemyYellowMovement: Failed to get target position. Using 0,0,0.");
+            return new Vector3(0, 0, 0);
         }
+           
+        
     }
 }
