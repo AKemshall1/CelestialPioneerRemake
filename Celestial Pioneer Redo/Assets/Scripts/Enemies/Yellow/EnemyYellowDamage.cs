@@ -5,23 +5,38 @@ using UnityEngine;
 public class EnemyYellowDamage : MonoBehaviour
 {
     EnemyYellowExplode explosion;
-    public Ship enemyYellow;
+    public Ship enemyYellow, player;
+    public GameObject bulletStorage;
+    string collisionTag;
 
-    private void Start()
+    private void Awake()
     {
-        explosion = GetComponent<EnemyYellowExplode>();
+        explosion = gameObject.GetComponent<EnemyYellowExplode>();
     }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        //Debug.Log("Yellow collided with something!");
+        collisionTag = other.gameObject.tag;
+
+        if (collisionTag =="Player")
         {
             //make player take damage
-            Debug.Log("Collided with player");
+           // Debug.Log("Yellow collided with player!");
             GetComponent<EnemyYellowMovement>().enabled = false;
             other.GetComponent<PlayerCollisions>().TakeDamage(enemyYellow.damage);
             explosion.Explode();
+        }
+        if (collisionTag == "bullet")
+        {
+           // Debug.Log("Yellow collided with the player bullet!");
+            enemyYellow.health -= player.damage;
+            other.transform.position = bulletStorage.transform.position;
+            if (enemyYellow.health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

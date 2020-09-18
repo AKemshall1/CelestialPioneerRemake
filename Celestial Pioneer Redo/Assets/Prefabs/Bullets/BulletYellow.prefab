@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 50932822119117630}
   - component: {fileID: 4896792513124898599}
   m_Layer: 0
-  m_Name: BulletB
+  m_Name: BulletYellow
   m_TagString: EnemyYellowBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265512201662210}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!68 &4896792513124898599
 EdgeCollider2D:
   m_ObjectHideFlags: 0

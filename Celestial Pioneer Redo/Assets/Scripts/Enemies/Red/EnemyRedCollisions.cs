@@ -19,6 +19,7 @@ public class EnemyRedCollisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bullet"))
         {
+            Debug.Log("Player bullet collided with enemy red");
             enemyRed.health -= player.damage;
             collision.transform.position = bulletStorage.transform.position;
             uti.CheckforDeath();

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1914710324959241154}
   - component: {fileID: 2306065038214998538}
   - component: {fileID: -5541568273165910070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EnemyYellow
   m_TagString: EnemyYellow
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00037425384, y: -0.001497075}
@@ -182,9 +182,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822781353527748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd0bc043e1750f545ac4dd313c04b216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyYellow: {fileID: 11400000, guid: 6b5297cab609dd34ab06af1f9ba6eb82, type: 2}
+  player: {fileID: 11400000, guid: 28d836bbab7a27d4d9be94e8f3180e4b, type: 2}
+  bulletStorage: {fileID: 4253143678801661036, guid: 3d272a30f36c10041aef000bc4ae1d29,
+    type: 3}

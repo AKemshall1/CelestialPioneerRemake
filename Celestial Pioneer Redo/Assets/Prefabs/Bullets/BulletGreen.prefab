@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 50861772044675644}
   - component: {fileID: 2153826647314373200}
   m_Layer: 0
-  m_Name: BulletD
+  m_Name: BulletGreen
   m_TagString: EnemyGreenBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2153826647314373200
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class PlayerShoot : MonoBehaviour
 			//shoot a bullet
 			//add to a counter
 			//when the counter reaches 3, move the bullet from 2 places away back to the player
-			Vector2 playerPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.2f);
+			Vector2 playerPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.4f);
 
 			bulletArr[bulletCount].transform.position = playerPos;
 			bulletArr[bulletCount].GetComponent<Rigidbody2D>().velocity = transform.right * player.bulletSpeed;
