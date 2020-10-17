@@ -25,6 +25,8 @@ TagManager:
   - SpeedUp
   - FireRateUp
   - MovementUp
+  - BoidManager
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -36,7 +38,7 @@ TagManager:
   - 
   - Shootable
   - Player
-  - 
+  - Boid
   - 
   - 
   - 

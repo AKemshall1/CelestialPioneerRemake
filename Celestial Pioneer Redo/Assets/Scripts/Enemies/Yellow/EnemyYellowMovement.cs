@@ -15,6 +15,9 @@ public class EnemyYellowMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         targetPos = player.transform.position;
+
+        float angle = Mathf.Atan2(player.transform.position.x, player.transform.position.z) * Mathf.Rad2Deg;
+        transform.rotation = new Quaternion(0, 0, transform.rotation.z + angle, 0);
     }
 
     // Update is called once per frame
@@ -23,7 +26,10 @@ public class EnemyYellowMovement : MonoBehaviour
         //Constantly move downwards
         //In the X axis direction of the player position cached.
 
+        
+
         transform.position = Vector3.MoveTowards(transform.position, targetPos, enemyYellow.moveSpeed);
+
     }
 
     public Vector3 GetTargetPosition()
